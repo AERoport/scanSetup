@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Добавить сканирование </title>
+</head>
+<body>
+    <h1>Добавление настройки сканирования</h1>
+    <form action="/cgi-bin/form.py" method="POST">
+        <div>МФУ:<input type="text" name="Host" required></div>
+        <div>Компьютер с папкой scan:<input type="text" name="Comp" required></div>
+        <div>Папка scan(опционально):<input type="text" name="Folder" value="scan"></div>
+        <div>Имя сотрудника:<input type="text" name="DisplayName" required></div>
+        <input type="submit" value=" Добавить">
+        <div><script>
+            document.write(new ActiveXObject("WScript.Network").UserName)
+        </script>
+        </div>
+    </form>
+</body>
+</html>
