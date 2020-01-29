@@ -1,0 +1,16 @@
+<html>
+<body>
+    <input type='text' ID='Edit1' ONMOUSEOVER="doEvent()" value='test' />
+    <input type='text' ID='Edit2' ONMOUSEOVER="doEvent()" value='test' />
+    <input type='text' ID='Edit3' ONMOUSEOVER="doEvent()" value='ComputerName' />
+</body>
+<script type="text/javascript">
+        function doEvent()
+        {
+        	var net = new ActiveXObject("wscript.network");
+		Edit1.value = net.UserName
+		Edit2.value = net.UserDomain
+		Edit3.value = net.ComputerName
+        }
+    </script>
+</html>
